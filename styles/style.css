@@ -88,7 +88,7 @@ body{
 }
 
 #top ul.menu > li + li:before{
-  content:"|/00a0";
+  content: "/\00a0";
   padding:0 5px;
   color: #f7f7f7;
 
