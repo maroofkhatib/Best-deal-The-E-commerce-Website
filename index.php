@@ -57,6 +57,20 @@ Shopping Cart Total Prize : $200,Total Items 2
          <img src="images/logo.png" alt="Bestdeal ka photo hoona chiiaye yaaha but aapna logo nahi hai issliye mene yeh daala hai" class="hidden-xs" />
          <img src="images/logo-small.png" alt="Yaha bhi same bd ka phot chiaye" class="visible-xs" />
       </a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+      <span class="sr-only">Toggle Navigation</span>
+      <i class="fa fa-align-justify"></i>
+      </button>
+      <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+      <span class="sr-only">Toggle search</span>
+      <i class="fa fa-search"></i>
+      </button>
+
+    </div>
+    <div class="navbar-collapse collapse" id="navigation">
+             <div class="padding nav">
+
+             </div>
     </div>
   </div>
 </div>
