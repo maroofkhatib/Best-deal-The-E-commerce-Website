@@ -69,6 +69,35 @@ Shopping Cart Total Prize : $200,Total Items 2
     </div>
     <div class="navbar-collapse collapse" id="navigation">
              <div class="padding nav">
+               <ul class="nav navbar-nav navbar-left">
+                 <li class="active">
+
+                   <a href="index.php">Home</a>
+                 </li>
+                 <li>
+                   <a href="checkout.php">My Account</a>
+                 </li>
+                 <li>
+                   <a href="cart.php">Shopping Cart</a>
+                 </li>
+                 <li>
+                   <a href="Contact.php">Contact Us</a>
+                 </li>
+               </ul>
+               <a class="btn btn-primary navbar-btn right" href="cart.php">
+                <i class="fa fa-shopping-cart"></i>
+               <span>4 items in cart </span>
+
+
+               </a>
+             </div>
+
+             <div class="navbar-collapse collapse right">
+               <button class="btn navbar-btn btn-primary" type="button" data-toggle="collapse" data-target="#search">
+               <span class="sr-only">Toggle Search</span>
+               <i class="fa fa-search"></i>
+
+               </button>
 
              </div>
     </div>
