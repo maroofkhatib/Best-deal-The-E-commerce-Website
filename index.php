@@ -50,7 +50,16 @@ Shopping Cart Total Prize : $200,Total Items 2
 
 
 </div>
-
+<div class="navbar navbar-default" id="navbar">
+  <div class="conatainer">
+    <div class="navbar-header">
+      <a class="navbar-brand home" href="index.php">
+         <img src="images/logo.png" alt="Bestdeal ka photo hoona chiiaye yaaha but aapna logo nahi hai issliye mene yeh daala hai" class="hidden-xs" />
+         <img src="images/logo-small.png" alt="Yaha bhi same bd ka phot chiaye" class="visible-xs" />
+      </a>
+    </div>
+  </div>
+</div>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 </body>
