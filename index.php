@@ -110,10 +110,11 @@ Shopping Cart Total Prize : $200,Total Items 2
       <form class="navbar-form" method="get" action="results.php">
         <div class="input-group">
           <input class="form-control" type="text" placeholder="Search" name="user_query" required/>
+          <span class="input-group-btn">
           <button type="submit" value="search" name="search" class="btn btn-primary">
           <i class="fa fa-search"></i>
           </button>
-
+</span>
         </div>
 
       </form>
