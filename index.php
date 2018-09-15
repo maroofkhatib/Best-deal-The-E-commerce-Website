@@ -100,6 +100,20 @@ Shopping Cart Total Prize : $200,Total Items 2
                </button>
 
              </div>
+
+
+    </div>
+    <div class="collapse clearfix" id="search">
+      <form class="navbar-form" method="get" action="results.php">
+        <div class="input-group">
+          <input class="form-control" type="text" placeholder="Search" name="user_query" required/>
+          <button type="submit" value="search" name="search" class="btn btn-primary">
+          <i class="fa fa-search"></i>
+          </button>
+
+        </div>
+
+      </form>
     </div>
   </div>
 </div>

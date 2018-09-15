@@ -93,3 +93,23 @@ body{
   color: #f7f7f7;
 
 }
+.navbar{
+   background: white;
+
+
+
+}
+.navbar-collapse.right{
+
+  float: right;
+
+
+}
+
+.navbar-brand{
+float: left;
+padding: 10px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 70px;
+}
