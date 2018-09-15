@@ -61,7 +61,7 @@ Shopping Cart Total Prize : $200,Total Items 2
       <span class="sr-only">Toggle Navigation</span>
       <i class="fa fa-align-justify"></i>
       </button>
-      <button type="button" class="navbar-toggle" data-toggle="navbar-toggle" data-target="#search">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#search">
       <span class="sr-only">Toggle search</span>
       <i class="fa fa-search"></i>
       </button>
@@ -76,6 +76,9 @@ Shopping Cart Total Prize : $200,Total Items 2
                  </li>
                  <li>
                    <a href="checkout.php">My Account</a>
+                 </li>
+                 <li>
+                   <a href="shop.php">Shop</a>
                  </li>
                  <li>
                    <a href="cart.php">Shopping Cart</a>
