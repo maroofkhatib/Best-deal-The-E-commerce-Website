@@ -3,169 +3,220 @@ My template for this website so don't copy ;
 author:arbaz khan
 */
 
-body{
-
-  font-family: "Roboto" , Helvitica ,Aerial ,sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #f0f0f0;
-  overflow-x: hidden;
-
+body {
+font-family: "Roboto", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.42857143;
+color: #333333;
+background-color: #f0f0f0;
+overflow-x: hidden;
 
 }
 
-/* Navbar styling top one */
-#top{
- background: #555555;
- padding:10px 0;
+/* Top Navbar Styles  */
 
+#top {
 
-}
-
-#top.offer{
-
-
-
-  color: #fff;
+background: #555555;
+padding: 10px 0;
 
 }
 
-#top.offer.btn{
-  text-transform: uppercase;
-
-
-
+#top .offer {
+color: #fff;
 }
-@media (max-width:991px){
-   #top.offer{
-     margin-bottom: 10px;
-   }
 
+#top .offer .btn {
+
+text-transform: uppercase;
 
 }
 
-@media (max-width:991px){
-  #top{
-    font-size: 12px;
-    text-align: center;
-  }
+@media (max-width: 991px) {
+
+#top .offer {
+margin-bottom: 10px;
 }
 
-#top a{
+}
 
+@media (max-width: 991px) {
 
-  color: #fff;
+#top {
+font-size: 12px;
+text-align: center;
+}
+
+}
+
+#top a {
+
+color: #fff;
+
 }
 
 #top ul.menu {
 
-  padding-top: 5px;
-  margin-left: 0;
-  text-align: right;
-  font-size: 12px;
-  list-style: none;
+padding-top: 5px;
 
-
-}
-
-@media (max-width: 991px){
- #top ul.menu{
-   text-align: center;
- }
-
+margin: 0;
+text-align: right;
+font-size: 12px;
+list-style: none;
 
 }
 
+@media (max-width: 991px) {
 
-#top ul.menu > li{
-  display: inline-block;
-
+#top ul.menu {
+text-align: center;
 }
-#top ul.menu > li a{
-  color: #eeeeee;
 
 }
 
-#top ul.menu > li + li:before{
-  content: "/\00a0";
-  padding:0 5px;
-  color: #f7f7f7;
+#top ul.menu > li {
 
-}
-.navbar{
-   background: white;
-
-
-
-}
-.navbar-collapse.right{
-
-  float: right;
-
+display: inline-block;
 
 }
 
-.navbar-brand{
-float: left;
+#top ul.menu > li a {
+
+color: #eeeeee;
+
+}
+
+#top ul.menu > li + li:before {
+content: "|\00a0";
+padding: 0 5px;
+color: #f7f7f7;
+
+}
+
+/* Header Styles */
+
+.navbar {
+background:white;
+
+}
+
+.navbar-collapse .right {
+float:right;
+}
+
+.navbar-brand {
+float:left;
 padding: 10px 15px;
-  font-size: 18px;
-  line-height: 20px;
-  height: 70px;
+font-size:18px;
+line-height:20px;
+height:70px;
 }
+
 .navbar-brand:hover,
 .navbar-brand:focus{
-  text-decoration: none;
+text-decoration:none;
+}
 
+.navbar ul.nav > li > a {
+text-transform:uppercase;
+font-weight:bold;
+font-size:14px;
 
 }
 
-.navbar ul.nav > li > a{
- text-transform: uppercase;
- font-weight: bold;
- font-size: 14px;
-}
 .padding-nav{
-
-  padding-top: 10px;
+padding-top:10px;
 }
 
 .navbar ul.nav > li > a:hover{
-background: #e7e7e7;
+background:#e7e7e7;
 }
 
 .btn-primary{
-   color: rgb(255 ,255,255);
-   background-color: rgb(79,191,156);
-   border-color:rgb(65 ,179,156);
+color:rgb(255, 255, 255);
+background-color:rgb(79, 191, 168);
+border-color:rgb(65, 179, 156);
+}
+
+#search .navbar-form{
+float:right;
+}
+
+#search {
+
+clear: both;
+border-top: solid 1px #9adacd;
+text-align:right;
+
+}
+
+#search .navbar-form .input-group {
+display:table;
+
+}
+
+#search .navbar-form .input-group .form-control {
+width:100%;
+
+}
+
+/* Slider Styles  */
+
+#slider {
+
+margin-bottom:40px;
+
+}
+
+/* Advantages Styles */
+
+.box {
+background: #fff;
+margin: 0 0 30px;
+border: solid 1px #e6e6e6;
+box-sizing: border-box;
+padding:20px;
+box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
 
 
 }
 
-#search.navbar-form{
-
-  float: right;
-
-}
-#search{
-  clear: both;
-  border-top:solid 1px #9adacd;
-  text-align: right;
-
-}
-#search.navbar-form.input-group{
-  display: table;
+#advantages {
+text-align:center;
 }
 
-#search.navbar-form.input-group.form-control{
-  width: 100%;
+#advantages .box .icon {
+position: absolute;
+font-size: 120px;
+width:100%;
+text-align:center;
+top: -20px;
+left:0;
+height:100%;
+float:left;
+color:#eeeeee;
+transition: all 0.2s ease-out;
+z-index:1;
+box-sizing: border-box;
 
 }
 
+#advantages .box h3 {
+position:relative;
+margin: 0 0 20px;
+font-weight: 300;
+text-transform: uppercase;
+z-index:2;
 
-#slider{
+}
 
-  margin-bottom: 40px;
+#advantages .box h3 a:hover {
+text-decoration:none;
+}
 
+#advantages .box p{
+position:relative;
+color:#555555;
+z-index:2;
 
 }
