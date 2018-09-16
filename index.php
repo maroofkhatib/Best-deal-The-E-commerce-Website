@@ -171,7 +171,104 @@ Shopping Cart Total Prize : $200,Total Items 2
 </div>
 </div>
 </div>
+<div id="advantages"><!-- advantages Starts -->
+<div class="container"><!-- container Starts -->
 
+<div class="same-height-row"><!-- same-height-row Starts -->
+
+<div class="col-sm-4"><!-- col-sm-4 Starts -->
+
+<div class="box same-height"><!-- box same-height Starts -->
+
+<div class="icon">
+
+<i class="fa fa-heart" ></i>
+
+</div>
+
+<h3><a href="#"> WE LOVE OUR CUSTOMERS </a></h3>
+
+<p>
+We are known to provide best possible service ever
+</p>
+
+
+</div><!-- box same-height Ends -->
+
+</div><!-- col-sm-4 Ends -->
+
+<div class="col-sm-4"><!-- col-sm-4 Starts -->
+
+<div class="box same-height" ><!-- box same-height Starts -->
+
+<div class="icon" >
+
+<i class="fa fa-tags" ></i>
+
+</div>
+
+<h3><a href="#" > BEST PRICES </a></h3>
+
+<p>
+
+You can check on all others sites about the prices and than compare with us.
+
+
+</p>
+
+
+</div><!-- box same-height Ends -->
+
+</div><!-- col-sm-4 Ends -->
+
+<div class="col-sm-4"><!-- col-sm-4 Starts -->
+
+<div class="box same-height" ><!-- box same-height Starts -->
+
+<div class="icon" >
+
+<i class="fa fa-thumbs-up" ></i>
+
+</div>
+
+<h3><a href="#" > 100% SATISFACTION GUARANTEED </a></h3>
+
+<p>
+
+Free returns on everything for 3 months.
+
+
+
+</p>
+
+
+</div><!-- box same-height Ends -->
+
+</div><!-- col-sm-4 Ends -->
+
+
+</div><!-- same-height-row Ends -->
+
+</div><!-- container Ends -->
+</div><!-- advantages Ends -->
+
+<div id="hot"><!-- hot Starts -->
+
+<div class="box"><!-- box Starts -->
+
+<div class="container"><!-- container Starts -->
+
+<div class="col-md-12"><!-- col-md-12 Starts -->
+
+<h2>Latest this week</h2>
+
+</div><!-- col-md-12 Ends -->
+
+</div><!-- container Ends -->
+
+</div><!-- box Ends -->
+
+</div><!-- hot Ends -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 </body>
