@@ -269,6 +269,28 @@ Free returns on everything for 3 months.
 </div><!-- box Ends -->
 
 </div><!-- hot Ends -->
+
+<div id="content" class="container"><!-- container Starts -->
+
+<div class="row">
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+<?php
+
+include("includes/footer.php");
+
+?>
+
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 </body>
