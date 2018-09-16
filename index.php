@@ -121,6 +121,44 @@ Shopping Cart Total Prize : $200,Total Items 2
     </div>
   </div>
 </div>
+
+<div class="container" id="slider"><!-- container Starts -->
+
+<div class="col-md-12"><!-- col-md-12 Starts -->
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel"><!-- carousel slide Starts --->
+
+<ol class="carousel-indicators"><!-- carousel-indicators Starts -->
+
+<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+
+<li data-target="#myCarousel" data-slide-to="1"></li>
+
+<li data-target="#myCarousel" data-slide-to="2"></li>
+
+<li data-target="#myCarousel" data-slide-to="3"></li>
+
+
+</ol><!-- carousel-indicators Ends -->
+
+<div class="carousel-inner">
+     <div class="item active">
+       <img src="admin_area/slides_images/1.jpg" />
+     </div>
+     <div class="item">
+       <img src="admin_area/slides_images/2.jpg" />
+     </div>
+     <div class="item">
+       <img src="admin_area/slides_images/3.jpg" />
+     </div>
+     <div class="item">
+       <img src="admin_area/slides_images/4.jpg" />
+     </div>
+</div>
+</div>
+</div>
+</div>
+
 <script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.min.js"></script>
 </body>
