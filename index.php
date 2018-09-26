@@ -1,3 +1,9 @@
+<?php
+
+include("includes/db.php");
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -121,7 +127,6 @@ Shopping Cart Total Prize : $200,Total Items 2
     </div>
   </div>
 </div>
-
 <div class="container" id="slider"><!-- container Starts -->
 
 <div class="col-md-12"><!-- col-md-12 Starts -->
@@ -141,36 +146,85 @@ Shopping Cart Total Prize : $200,Total Items 2
 
 </ol><!-- carousel-indicators Ends -->
 
-<div class="carousel-inner">
-     <div class="item active">
-       <img src="admin_area/slides_images/1.jpg" />
-     </div>
-     <div class="item">
-       <img src="admin_area/slides_images/2.jpg" />
-     </div>
-     <div class="item">
-       <img src="admin_area/slides_images/3.jpg" />
-     </div>
-     <div class="item">
-       <img src="admin_area/slides_images/4.jpg" />
-     </div>
+<div class="carousel-inner"><!-- carousel-inner Starts -->
+
+<?php
+
+$get_slides = "select * from slider LIMIT 0,1";
+
+$run_slides = mysqli_query($con,$get_slides);
+
+while($row_slides=mysqli_fetch_array($run_slides)){
+
+$slide_name = $row_slides['slide_name'];
+$slide_image = $row_slides['slide_image'];
+
+echo "
+
+<div class='item active'>
+
+<img src='admin_area/slides_images/$slide_image'>
+
 </div>
-<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+";
+}
+
+?>
+
+<?php
+
+$get_slides = "select * from slider LIMIT 1,3 ";
+
+$run_slides = mysqli_query($connection,$get_slides);
+
+while($row_slides = mysqli_fetch_array($run_slides)) {
+
+
+$slide_name = $row_slides['slide_name'];
+
+$slide_image = $row_slides['slide_image'];
+
+echo "
+
+<div class='item'>
+
+<img src='admin_area/slides_images/$slide_image'>
+
+</div>
+
+";
+
+
+}
+
+
+
+?>
+
+</div><!-- carousel-inner Ends -->
+
+<a class="left carousel-control" href="#myCarousel" data-slide="prev"><!-- left carousel-control Starts -->
+
 <span class="glyphicon glyphicon-chevron-left"> </span>
 
 <span class="sr-only"> Previous </span>
 
-</a>
-<a class="right carousel-control" href="#myCarousel" data-slide="next">
+</a><!-- left carousel-control Ends -->
+
+<a class="right carousel-control" href="#myCarousel" data-slide="next"><!-- right carousel-control Starts -->
 
 <span class="glyphicon glyphicon-chevron-right"> </span>
 
 <span class="sr-only"> Next </span>
 
-</a>
-</div>
-</div>
-</div>
+</a><!-- right carousel-control Ends -->
+
+</div><!-- carousel slide Ends --->
+
+</div><!-- col-md-12 Ends -->
+
+</div><!-- container Ends -->
 <div id="advantages"><!-- advantages Starts -->
 <div class="container"><!-- container Starts -->
 
