@@ -32,6 +32,7 @@ include("functions/functions.php");
 <div class="col-md-6 offer"><!-- col-md-6 offer Starts -->
 
 <a href="#" class="btn btn-success btn-sm" >
+
 <?php
 
 if(!isset($_SESSION['customer_email'])){
@@ -47,6 +48,7 @@ echo "Welcome : " . $_SESSION['customer_email'] . "";
 
 
 ?>
+
 </a>
 
 <a href="#">
@@ -178,7 +180,7 @@ echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
 <a href="cart.php"> Shopping Cart </a>
 </li>
 
-<li class="active" >
+<li>
 <a href="contact.php"> Contact Us </a>
 </li>
 
@@ -247,7 +249,7 @@ echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
 <a href="index.php">Home</a>
 </li>
 
-<li>Contact Us</li>
+<li>Register</li>
 
 </ul><!-- breadcrumb Ends -->
 
@@ -270,99 +272,93 @@ echo "<a href='customer/my_account.php?my_orders'>My Account</a>";
 
 <center><!-- center Starts -->
 
-<h2>Contact Us </h2>
+<h2> Register A New Account </h2>
 
-<p class="text-muted" >
-If you have any questions, please feel free to contact us, our customer service center is working for you 24/7.
 
-</p>
 
 </center><!-- center Ends -->
 
 </div><!-- box-header Ends -->
 
-<form action="contact.php" method="post" ><!-- form Starts -->
+<form action="customer_register.php" method="post" enctype="multipart/form-data" ><!-- form Starts -->
 
 <div class="form-group" ><!-- form-group Starts -->
 
-<label>Name</label>
+<label>Customer Name</label>
 
-<input type="text" class="form-control" name="name" required>
-
-</div><!-- form-group Ends -->
-
-<div class="form-group"><!-- form-group Starts -->
-
-<label>Email</label>
-
-<input type="text" class="form-control" name="email" required>
+<input type="text" class="form-control" name="c_name" required>
 
 </div><!-- form-group Ends -->
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label> Subject </label>
+<label> Customer Email</label>
 
-<input type="text" class="form-control" name="subject" required>
+<input type="text" class="form-control" name="c_email" required>
 
 </div><!-- form-group Ends -->
 
 <div class="form-group"><!-- form-group Starts -->
 
-<label> Message </label>
+<label> Customer Password </label>
 
-<textarea class="form-control" name="message"> </textarea>
+<input type="password" class="form-control" name="c_pass" required>
 
 </div><!-- form-group Ends -->
+
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label> Customer Country </label>
+
+<input type="text" class="form-control" name="c_country" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label> Customer City </label>
+
+<input type="text" class="form-control" name="c_city" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label> Customer Contact </label>
+
+<input type="text" class="form-control" name="c_contact" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label> Customer Address </label>
+
+<input type="text" class="form-control" name="c_address" required>
+
+</div><!-- form-group Ends -->
+
+<div class="form-group"><!-- form-group Starts -->
+
+<label> Customer Image </label>
+
+<input type="file" class="form-control" name="c_image" required>
+
+</div><!-- form-group Ends -->
+
 
 <div class="text-center"><!-- text-center Starts -->
 
-<button type="submit" name="submit" class="btn btn-primary">
+<button type="submit" name="register" class="btn btn-primary">
 
-<i class="fa fa-user-md"></i> Send Message
+<i class="fa fa-user-md"></i> Register
 
 </button>
 
 </div><!-- text-center Ends -->
 
 </form><!-- form Ends -->
-
-<?php
-
-if(isset($_POST['submit'])){
-
-// Admin receives email through this code
-
-$sender_name = $_POST['name'];
-
-$sender_email = $_POST['email'];
-
-$sender_subject = $_POST['subject'];
-
-$sender_message = $_POST['message'];
-
-$receiver_email = "arbazkhan971@gmail.com";
-
-mail($receiver_email,$sender_name,$sender_subject,$sender_message,$sender_email);
-
-// Send email to sender through this code
-
-$email = $_POST['email'];
-
-$subject = "Welcome to my website";
-
-$msg = "I shall get you soon, thanks for sending us email";
-
-$from = "arbazkhan971@gmail.com";
-
-mail($email,$subject,$msg,$from);
-
-echo "<h2 align='center'>Your message has been sent successfully</h2>";
-
-}
-
-
-?>
 
 </div><!-- box Ends -->
 
@@ -387,3 +383,66 @@ include("includes/footer.php");
 
 </body>
 </html>
+
+<?php
+
+if(isset($_POST['register'])){
+
+$c_name = $_POST['c_name'];
+
+$c_email = $_POST['c_email'];
+
+$c_pass = $_POST['c_pass'];
+
+$c_country = $_POST['c_country'];
+
+$c_city = $_POST['c_city'];
+
+$c_contact = $_POST['c_contact'];
+
+$c_address = $_POST['c_address'];
+
+$c_image = $_FILES['c_image']['name'];
+
+$c_image_tmp = $_FILES['c_image']['tmp_name'];
+
+$c_ip = getRealUserIp();
+
+move_uploaded_file($c_image_tmp,"customer/customer_images/$c_image");
+
+$insert_customer = "insert into customers (customer_name,customer_email,customer_pass,customer_country,customer_city,customer_contact,customer_address,customer_image,customer_ip) values ('$c_name','$c_email','$c_pass','$c_country','$c_city','$c_contact','$c_address','$c_image','$c_ip')";
+
+
+$run_customer = mysqli_query($con,$insert_customer);
+
+$sel_cart = "select * from cart where ip_add='$c_ip'";
+
+$run_cart = mysqli_query($con,$sel_cart);
+
+$check_cart = mysqli_num_rows($run_cart);
+
+if($check_cart>0){
+
+$_SESSION['customer_email']=$c_email;
+
+echo "<script>alert('You have been Registered Successfully')</script>";
+
+echo "<script>window.open('checkout.php','_self')</script>";
+
+}else{
+
+$_SESSION['customer_email']=$c_email;
+
+echo "<script>alert('You have been Registered Successfully')</script>";
+
+echo "<script>window.open('index.php','_self')</script>";
+
+
+}
+
+
+
+
+}
+
+?>
